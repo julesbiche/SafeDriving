@@ -201,6 +201,8 @@ body {
 	height: 50px;
 	margin: 40px auto;
 	text-align: center;
+	font-weight: bold;
+	color: gray;
 		
 }
 
@@ -219,4 +221,29 @@ p {
 	line-height: 20px;
 	color: #686868;
 	text-indent: 10px;
+}
+
+/* ---- Tables ---- */
+
+table {
+	margin: 10px auto;	
+}
+tr {
+    border-collapse: collapse;
+    font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+    font-size: 12px;
+    text-align: left;
+}
+
+td {
+	border-bottom: 1px solid #CCCCCC;
+    color: #666699;
+    padding: 20px 20px !important;	
+}
+th {
+    border-bottom: 2px solid #6678B1;
+    color: #003399;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 8px;	
 }
