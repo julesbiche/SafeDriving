@@ -4,10 +4,9 @@ require_once('includes/lib/Twig/Autoloader.php');
     Twig_Autoloader::register();
     
     $loader = new Twig_Loader_Filesystem('/Applications/MAMP/htdocs/safedriving/templates');
-    $tpl = new Twig_Environment($loader, array(
-      'cache' => 'includes/lib/twig/compilation_cache',
-    ));
+    $tpl = new Twig_Environment($loader, array());
 
+// Autre inclusions 
 require_once('includes/class/valid_include.class.php');
 
 ?>
@@ -19,23 +18,50 @@ require_once('includes/class/valid_include.class.php');
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" media="screen" type="text/css" title="Safe Driving" href="includes/css/style.css" />
 	<link rel="stylesheet" media="screen" type="text/css" title="Safe Driving" href="includes/css/reset.css" />
+	
+	<!-- Javascript includes -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="includes/js/jquery.validate.min.js"></script>
 </head>
 
 <body>
+	<div id="panneau">
+		<div id="panneau-title">							
+			<?php 
+				if(isset($_GET['page'])){
+					// TODO : truc moins crade
+					if($_GET['page'] == "espace_membre")
+						echo "Espace <br/> Membre";
+					else	
+						echo ucwords($_GET['page']);
+				}
+				else {
+					echo 'Accueil';
+				}
+			?>
+		</div>
+	</div>
 	<div id="header"></div>
 	<div id="global">
-		<div class="box">
+		<div id="box">
 			<div class="content-box">
 				<div id="slogan"></div>
 				<div id="menucontainer">
 					<div id="menunav">
 						<ul>
-							<li><a href="index.html" title="Accueil"<?php if($_GET['page'] == 'index')echo 'class="current"'?>><span>Accueil</span></a></li>
-							<li><a href="membres.html" title="Espace membre"<?php if($_GET['page'] == 'index')echo 'class="current"'?><span>Espace membre</span></a></li>
-							<li><a href="index.php?page=formations" title="Formations"<?php if($_GET['page'] == 'formations')echo 'class="current"'?><span>Formations</span></a></li>
-							<li><a href="index.php?page=tarifs" title="Tarifs"<?php if($_GET['page'] == 'tarifs')echo 'class="current"'?><span>Tarifs</span></a></li>
-							<li><a href="forum.html" title="Forum"<?php if($_GET['page'] == 'index')echo 'class="current"'?><span>Forum</span></a></li>
-							<li><a href="contact.html" title="Contact"<?php if($_GET['page'] == 'index')echo 'class="current"'?><span>Contact</span></a></li>
+							<?php 
+								if(isset($_GET['page'])){
+									$page = $_GET['page'];
+								} else {
+									$page = 'accueil';
+								}
+							?>
+							<li><a href="index.php?page=accueil" title="Accueil" <?php if( $page == 'accueil')echo 'class="current"'?>><span>Accueil</span></a></li>
+							<li><a href="index.php?page=espace_membre" title="Espace membre" <?php if( $page == 'espace_membre')echo 'class="current"'?>><span>Espace membre</span></a></li>
+							<li><a href="index.php?page=formations" title="Formations" <?php if( $page == 'formations')echo 'class="current"'?>><span>Formations</span></a></li>
+							<li><a href="index.php?page=tarifs" title="Tarifs" <?php if( $page == 'tarifs')echo 'class="current"'?>><span>Tarifs</span></a></li>
+							<li><a href="index.php?page=forum" title="Forum" <?php if( $page == 'forum')echo 'class="current"'?>><span>Forum</span></a></li>
+							<li><a href="index.php?page=contact" title="Contact" <?php if( $page == 'contact')echo 'class="current"'?>><span>Contact</span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -50,15 +76,15 @@ require_once('includes/class/valid_include.class.php');
 					} 
 					// Si pas d'inclusion on redirige vers l'index
 					else {
-							include ($_SERVER['DOCUMENT_ROOT'] . "/Safedriving/" . 'accueil');
-
+							include ($_SERVER['DOCUMENT_ROOT'] . "/Safedriving/accueil.php");
 					}
 					?>
 				</div>
+				
 			</div>
-			<div class="bottom-box"></div>
+			<div class="bottom-box">
+			</div>
 		</div>
-		<div id="panneau"></div>
 	</div>
 </body>
 </html>

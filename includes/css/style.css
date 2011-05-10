@@ -106,23 +106,21 @@ body {
 	height: 70px;
 }
 
-.box {
+#box {
 	background: url(../pictures/structure/header.png) center top no-repeat;
 	padding-top: 70px;
 	position: relative;
 	width: 800px;
-	height: 20px;
-	float: left;
 }
 
 .content-box {
 	background: url(../pictures/structure/box3.png) center repeat-y;
-	height: 400px;
+	min-height: 400px;
 }
 
 .bottom-box {
 	background: url(../pictures/structure/box4.png) center bottom no-repeat;
-	height: 70px;
+	height: 70px;	
 }
 
 #textemenu {
@@ -137,11 +135,6 @@ body {
 	padding-top: 10px;
 	color: red;
 	font-size: 1em;
-}
-
-#contenu p {
-	margin-left: 1.5em;
-	padding-right: 1.5em;
 }
 
 .marge {
@@ -187,4 +180,43 @@ body {
 
 #viewer {
 	text-align: center;
+}
+
+#contenu {
+	min-height: 300px;
+	padding: 20px;
+}
+
+#panneau {
+	position: fixed;
+    bottom: 0px;
+    left: 0;
+	background:url(../pictures/structure/panneau.png) center no-repeat;
+	width: 165px;
+	height:200px;
+}
+
+#panneau-title {
+	width:150px;
+	height: 50px;
+	margin: 40px auto;
+	text-align: center;
+		
+}
+
+/* ----  Titres ---- */
+h1 {
+	padding:20px 0px;
+	text-shadow: 1px 1px 3px #888;
+	font-size: 20px;
+	display:block;
+	height: 35px;
+}
+
+/* ---- Content ---- */
+p {
+	font-size: 14px;
+	line-height: 20px;
+	color: #686868;
+	text-indent: 10px;
 }
