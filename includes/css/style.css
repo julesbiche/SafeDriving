@@ -1,0 +1,190 @@
+body {
+	background-image: url(../pictures/structure/font.png);
+	background-repeat: repeat-x;
+	background-position: top left;
+	background-color: #b8b9bc;
+}
+
+/* ---------------------- Menu DEBUT---------------------- */
+#menucontainer {
+	margin-left: 0.1em;
+	padding-right: -3em;
+	height: 56px;
+	color: #E0E0E0;
+	background: #143D55;
+	width: 796px;
+	font-family: Helvetica, Arial, Verdana, sans-serif;
+}
+
+#menunav {
+	padding-right: 2 . em;
+	position: relative;
+	height: 33px;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: #000000 url(../pictures/structure/menu_bg.gif) repeat-x
+		bottom left;
+	padding: 0 0 0 20px;
+}
+
+#menunav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	width: auto;
+	float: left;
+}
+
+#menunav ul li {
+	display: block;
+	float: left;
+	margin: 0 1px;
+}
+
+#menunav ul li a {
+	display: block;
+	float: left;
+	color: #EAF3F8;
+	text-decoration: none;
+	padding: 0 0 0 20px;
+	height: 33px;
+}
+
+#menunav ul li a span {
+	padding: 12px 20px 0 0;
+	height: 21px;
+	float: left;
+}
+
+#menunav ul li a:hover {
+	color: #fff;
+	background: transparent url(../pictures/structure/menu_bg-OVER.gif)
+		repeat-x bottom left;
+}
+
+#menunav ul li a:hover span {
+	display: block;
+	width: auto;
+	cursor: pointer;
+}
+
+#menunav ul li a.current,#menunav ul li a.current:hover {
+	color: #fff;
+	background: #1D6893 url(../pictures/structure/menu_left-ON.gif)
+		no-repeat top left;
+	line-height: 275%;
+}
+
+#menunav ul li a.current span {
+	display: block;
+	padding: 0 20px 0 0;
+	width: auto;
+	background: #1D6893 url(../pictures/structure/menu_right-ON.gif)
+		no-repeat top right;
+	height: 33px;
+}
+
+/* ---------------------- Menu FIN ---------------------- */
+html,body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Verdana, serif, sans-serif;
+	text-align: justify;
+}
+
+#global {
+	width: 800px;
+	height: 400px;
+	margin: 0 auto;
+}
+
+#header {
+	height: 70px;
+}
+
+.box {
+	background: url(../pictures/structure/header.png) center top no-repeat;
+	padding-top: 70px;
+	position: relative;
+	width: 800px;
+	height: 20px;
+	float: left;
+}
+
+.content-box {
+	background: url(../pictures/structure/box3.png) center repeat-y;
+	height: 400px;
+}
+
+.bottom-box {
+	background: url(../pictures/structure/box4.png) center bottom no-repeat;
+	height: 70px;
+}
+
+#textemenu {
+	font-family: Arial, Verdana, serif;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+#sousmenu {
+	font-family: Arial, Verdana, serif;
+	text-align: center;
+	padding-top: 10px;
+	color: red;
+	font-size: 1em;
+}
+
+#contenu p {
+	margin-left: 1.5em;
+	padding-right: 1.5em;
+}
+
+.marge {
+	margin-left: 1.5em;
+}
+
+#slogan {
+	background: url(../pictures/structure/slogan.png) center top no-repeat;
+	position: relative;
+	left: 20%;
+	top: -1%;
+	height: 45px;
+	width: 350px;
+}
+
+/*---------Pour la page Message.html---------*/
+#Message {
+	text-align: center;
+}
+
+/*---------Pour la page Photos.html---------*/
+#thumbs {
+	overflow: auto;
+	list-style: none;
+	text-align: center;
+	padding: 0;
+}
+
+#thumbs li {
+	display: inline-block
+}
+
+#thumbs a {
+	display: block;
+	padding: 10px;
+	outline: none;
+	text-align: center;
+}
+
+#thumbs a:active,#thumbs a:focus {
+	background: orange;
+}
+
+#viewer {
+	text-align: center;
+}
