@@ -3,6 +3,7 @@ require_once '../config/main_config.php';
 //plop
 // Biere
 // Hoegarden
+// leffe ruby
 
 function addUser($utilisateurLogin, $utilisateurMdp, $utilisateurType, $utilisateurJeton, $utilisateurNom, $utilisateurPrenom, $utilisateurCivilite, $utilisateurVille, $utilisateurCp, $utilisateurAdresse, $utilisateurEtat){
 	try {
