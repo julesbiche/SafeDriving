@@ -2,6 +2,7 @@
 require_once '../config/main_config.php';
 
 // Biere
+// Hoegarden
 
 function addUser($utilisateurLogin, $utilisateurMdp, $utilisateurType, $utilisateurJeton, $utilisateurNom, $utilisateurPrenom, $utilisateurCivilite, $utilisateurVille, $utilisateurCp, $utilisateurAdresse, $utilisateurEtat){
 	try {
