@@ -1,6 +1,7 @@
 <?php
 require_once '../config/main_config.php';
 
+// Biere
 
 function addUser($utilisateurLogin, $utilisateurMdp, $utilisateurType, $utilisateurJeton, $utilisateurNom, $utilisateurPrenom, $utilisateurCivilite, $utilisateurVille, $utilisateurCp, $utilisateurAdresse, $utilisateurEtat){
 	try {
