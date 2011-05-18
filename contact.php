@@ -1,4 +1,5 @@
 <?php
-    $template = $tpl->loadTemplate('contact.html');
-    echo $template->render(array());
+	$tpl = new Hyla_Tpl('templates');
+	$tpl->importFile('contact.tpl');
+	echo $tpl->render();
 ?>

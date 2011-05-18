@@ -1,4 +1,5 @@
 <?php
-    $template = $tpl->loadTemplate('formations.html');
-    echo $template->render(array());
+	$tpl = new Hyla_Tpl('templates');
+	$tpl->importFile('formations.tpl');
+	echo $tpl->render();
 ?>

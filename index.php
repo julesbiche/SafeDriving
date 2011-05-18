@@ -1,13 +1,5 @@
 <?php 
-// Test Commit  2 (19:38)
-// Inclusion de Twig
-require_once('includes/lib/Twig/Autoloader.php');
-    Twig_Autoloader::register();
-    
-    $loader = new Twig_Loader_Filesystem('/Applications/MAMP/htdocs/safedriving/templates');
-    $tpl = new Twig_Environment($loader, array());
-
-// Autre inclusions 
+require_once('includes/class/hyla_tpl.class.php');
 require_once('includes/class/valid_include.class.php');
 
 ?>

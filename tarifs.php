@@ -1,4 +1,5 @@
 <?php
-    $template = $tpl->loadTemplate('tarifs.html');
-    echo $template->render(array());
+	$tpl = new Hyla_Tpl('templates');
+	$tpl->importFile('tarifs.tpl');
+	echo $tpl->render();
 ?>

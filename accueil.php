@@ -1,4 +1,5 @@
 <?php
-    $template = $tpl->loadTemplate('accueil.html');
-    echo $template->render(array());
+	$tpl = new Hyla_Tpl('templates');
+	$tpl->importFile('accueil.tpl');
+	echo $tpl->render();
 ?>
