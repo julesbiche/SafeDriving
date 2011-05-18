@@ -12,10 +12,13 @@ session_start();
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" media="screen" type="text/css" title="Safe Driving" href="includes/css/style.css" />
 	<link rel="stylesheet" media="screen" type="text/css" title="Safe Driving" href="includes/css/reset.css" />
+	<link rel="stylesheet" media="screen" type="text/css" title="Safe Driving" href="includes/css/jquery-ui-1.8.13.custom.css" />
 	
 	<!-- Javascript includes -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script type="text/javascript" src="includes/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="includes/js/jquery-ui-1.8.13.custom.min.js"></script>
+	
 </head>
 
 <body>
