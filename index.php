@@ -1,20 +1,6 @@
 <?php 
-<<<<<<< HEAD
 require_once('includes/class/hyla_tpl.class.php');
-=======
-// Test Commit 4 by Tom
-// Test Commit  3 (21:16)
-// Inclusion de Twig
-require_once('includes/lib/Twig/Autoloader.php');
-    Twig_Autoloader::register();
-    
-    $loader = new Twig_Loader_Filesystem('/Applications/MAMP/htdocs/safedriving/templates');
-    $tpl = new Twig_Environment($loader, array());
-
-// Autre inclusions 
->>>>>>> 08fd29883cb7e016c9b564dd5ac7d7bab0899c27
 require_once('includes/class/valid_include.class.php');
-
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
