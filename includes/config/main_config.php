@@ -6,7 +6,7 @@ define('LOGIN','root');
 define('MDP','root');
 
 // Sel
-define('SALT','N003ZMCM7W4ZWAO2IQXMR1GVRJM7NBIYBRMJ388M')
+define('SALT','N003ZMCM7W4ZWAO2IQXMR1GVRJM7NBIYBRMJ388M');
 
 // Chemins divers
 define('ROOT','http://localhost/prestaway/');

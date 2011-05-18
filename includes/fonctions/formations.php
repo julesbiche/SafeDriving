@@ -19,7 +19,7 @@ function addFormation($formationTitre){
 	catch(Exception $e)
 	{
 		if(!PROD){
-			echo $e;
+			echo $e->getMessage();
 		}
 	}
 }
