@@ -1,6 +1,11 @@
 <?php
 require_once '../config/main_config.php';
 
+
+
+/*
+ * Ajout d'un utilisateur
+ */
 function addUser($utilisateurLogin, $utilisateurMdp, $utilisateurType, $utilisateurJeton, $utilisateurNom, $utilisateurPrenom, $utilisateurCivilite, $utilisateurVille, $utilisateurCp, $utilisateurAdresse, $utilisateurEtat){
 	try {
 		$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
@@ -23,6 +28,7 @@ function addUser($utilisateurLogin, $utilisateurMdp, $utilisateurType, $utilisat
 		'utilisateur_etat' => $utilisateurEtat
 		));
 				
+		$req->closeCursor();
 	}
 	catch(Exception $e)
 	{
@@ -33,6 +39,10 @@ function addUser($utilisateurLogin, $utilisateurMdp, $utilisateurType, $utilisat
 	}
 }
 
+
+/*
+ * Récuperer les infos d'un utilisateur
+ */
 function getInfosUser($utilisateurLogin){
 	try 
 	{
@@ -63,6 +73,10 @@ function getInfosUser($utilisateurLogin){
 	}
 }
 
+
+/*
+ * Mettre à jour un utilisateur
+ */
 function updateUser($utilisateurLogin, $utilisateurMdp, $utilisateurType, $utilisateurJeton, $utilisateurNom, $utilisateurPrenom, $utilisateurCivilite, $utilisateurVille, $utilisateurCp, $utilisateurAdresse, $utilisateurEtat){
 	try {
 		$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
@@ -98,6 +112,8 @@ function updateUser($utilisateurLogin, $utilisateurMdp, $utilisateurType, $utili
 		'nvAdresse' => $utilisateurAdresse,
 		'nvEtat' => $utilisateurEtat
 		));
+		
+		$req->closeCursor();
 				
 	}
 	catch(Exception $e)
@@ -108,5 +124,32 @@ function updateUser($utilisateurLogin, $utilisateurMdp, $utilisateurType, $utili
 		}
 	}
 }
+
+
+/*
+ * Supprimer un utilisateur
+ */
+function deleteUser($utilisateurLogin){
+
+	try {
+		$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
+		$bdd = new PDO(CONNECTION_STRING, LOGIN, MDP, $pdo_options);
+		$bdd->exec("SET CHARACTER SET utf8");
+		
+		$req = $bdd->prepare('DELETE FROM sd_utilisateurs WHERE utilisateur_login = ?');
+		$req->execute(array($utilisateurLogin));
+		
+		$req->closeCursor();
+				
+	}
+	catch(Exception $e)
+	{
+		if(!PROD)
+		{
+			echo $e->getMessage();
+		}
+	}
+}
+
 
 ?>
