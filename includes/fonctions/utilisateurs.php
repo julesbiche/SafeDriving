@@ -1,6 +1,4 @@
 <?php
-require_once '../config/main_config.php';
-
 function addUser($utilisateurLogin, $utilisateurMdp, $utilisateurType, $utilisateurJeton, $utilisateurNom, $utilisateurPrenom, $utilisateurCivilite, $utilisateurVille, $utilisateurCp, $utilisateurAdresse, $utilisateurEtat){
 	try {
 		$pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
